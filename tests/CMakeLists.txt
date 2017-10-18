@@ -1,7 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
 
-set (PROJECT_TEST_NAME ${PROJECT_NAME}-ut)
-
 enable_testing()
 
 # Download and unpack googletest at configure time
@@ -17,14 +15,6 @@ execute_process(COMMAND "${CMAKE_COMMAND}" --build .
 add_subdirectory("${CMAKE_BINARY_DIR}/googletest-src"
                  "${CMAKE_BINARY_DIR}/googletest-build")
 
-# Test folder
-set (TESTS_DIR include)
-
-# Header files folder
-set (INCL_DIR include)
-
-include_directories (${PROJECT_SOURCE_DIR}/${TESTS_DIR}/${INCL_DIR})
-
 set (MAIN_SRC_DIR ../src)
 
 set(PROY_UT_SRC
@@ -32,7 +22,9 @@ set(PROY_UT_SRC
 )
 
 # Include all project source files here
-set (MAIN_SOURCE )
+set (MAIN_SOURCE
+    ${MAIN_SRC_DIR}/greeter.cpp
+)
 
 add_executable (${PROJECT_TEST_NAME} ${PROY_UT_SRC} ${MAIN_SOURCE})
 

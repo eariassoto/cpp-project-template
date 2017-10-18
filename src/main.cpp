@@ -1,7 +1,9 @@
 // System includes
-#include <stdio.h>
+#include "greeter.h"
+#include <iostream>
 
-int main (int argc, char *argv[]) {
-    printf("%s: Hello World!\n", __PRETTY_FUNCTION__);
-    return 0;
+int main(int argc, char *argv[]) {
+  Greeter greeter;
+  std::cout << greeter.greet() << '\n';
+  return 0;
 }
