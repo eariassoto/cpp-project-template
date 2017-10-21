@@ -5,5 +5,7 @@
 class Greeter{
 	public:
 	std::string greet();
+	std::string greetTo(std::string name);
 };
 #endif /* __GREETER__ */
+
