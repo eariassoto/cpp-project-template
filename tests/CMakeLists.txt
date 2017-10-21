@@ -18,7 +18,7 @@ add_subdirectory("${CMAKE_BINARY_DIR}/googletest-src"
                  "${CMAKE_BINARY_DIR}/googletest-build")
 
 # Test folder
-set (TESTS_DIR include)
+set (TESTS_DIR tests)
 
 # Header files folder
 set (INCL_DIR include)
