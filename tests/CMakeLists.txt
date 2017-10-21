@@ -21,15 +21,18 @@ set (TESTS_DIR tests)
 set (INCL_DIR include)
 include_directories (${PROJECT_SOURCE_DIR}/${TESTS_DIR}/${INCL_DIR})
 
+set (SRC_DIR src)
 set(PROY_UT_SRC
-    main.cpp
+    ${SRC_DIR}/main.cpp
+    ${SRC_DIR}/greeterTests.cpp
 )
 
 set (MAIN_SRC_DIR ../src)
 include_directories (${PROJECT_SOURCE_DIR}/${INCL_DIR})
 # Include all project source files here
-# for example: ${MAIN_SRC_DIR}/myClass.cpp
-set (MAIN_SOURCE)
+set (MAIN_SOURCE 
+    ${MAIN_SRC_DIR}/greeter.cpp
+)
 
 add_executable (${PROJECT_TEST_NAME} ${PROY_UT_SRC} ${MAIN_SOURCE})
 

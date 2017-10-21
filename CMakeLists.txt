@@ -18,6 +18,7 @@ include_directories (${PROJECT_SOURCE_DIR}/${INCL_DIR})
 # Important: Include all source files on this list
 set (SOURCE
     ${SRC_DIR}/main.cpp
+    ${SRC_DIR}/greeter.cpp
 )
 
 # Output folder
