@@ -26,6 +26,7 @@ set(PROY_UT_SRC
 )
 
 set (MAIN_SRC_DIR ../src)
+include_directories (${PROJECT_SOURCE_DIR}/${INCL_DIR})
 # Include all project source files here
 # for example: ${MAIN_SRC_DIR}/myClass.cpp
 set (MAIN_SOURCE)
