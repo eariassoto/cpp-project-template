@@ -1,9 +1,13 @@
-// System includes
-#include "greeter.h"
 #include <iostream>
 
+#include "Greeter.h"
+#include "Person.h"
+
 int main(int argc, char *argv[]) {
-  Greeter greeter;
-  std::cout << greeter.greet() << '\n';
+  Person p{"Emmanuel"};
+  Greeter g;
+
+  std::cout << g.greet() << '\n';
+  std::cout << g.greetTo(p) << '\n';
   return 0;
 }

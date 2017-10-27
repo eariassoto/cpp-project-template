@@ -1,14 +1,16 @@
+#include "Greeter.h"
+#include "MockPerson.h"
 #include <gtest/gtest.h>
-#include "greeter.h"
+using ::testing::Return;
 
 TEST(GreeterTests, GreetTest) {
-    Greeter g;
-    ASSERT_STREQ(g.greet().c_str(), "Hello world!");
+  Greeter g;
+  ASSERT_STREQ(g.greet().c_str(), "Hello world!");
 }
 
 TEST(GreeterTests, GreetToTest) {
-    auto name = "Greg";
-    Greeter g;
-    ASSERT_STREQ(g.greetTo(name).c_str(), "Hi Greg!");
+  MockPerson mockPerson;
+  EXPECT_CALL(mockPerson, getName()).WillOnce(Return("Greg"));
+  Greeter g;
+  ASSERT_STREQ(g.greetTo(mockPerson).c_str(), "Hi Greg!");
 }
-
