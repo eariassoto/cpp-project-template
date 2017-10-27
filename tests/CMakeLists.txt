@@ -19,7 +19,9 @@ add_subdirectory("${CMAKE_BINARY_DIR}/googletest-src"
 set (TESTS_DIR tests)
 # Header files folder
 set (INCL_DIR include)
+set (MOCKS_DIR mocks)
 include_directories (${PROJECT_SOURCE_DIR}/${TESTS_DIR}/${INCL_DIR})
+include_directories (${PROJECT_SOURCE_DIR}/${TESTS_DIR}/${INCL_DIR}/${MOCKS_DIR})
 
 set (SRC_DIR src)
 set(PROY_UT_SRC
