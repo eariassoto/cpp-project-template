@@ -1,10 +1,11 @@
 #ifndef __PERSON__H__
 #define __PERSON__H__
+#include <IPerson.h>
 
 class Person : public IPerson {
 public:
   Person(std::string name) : name(name){};
-  Person(){};
+  ~Person(){};
 
   std::string getName() const { return name; };
 

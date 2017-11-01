@@ -1,5 +1,5 @@
 #include "Greeter.h"
-#include "MockPerson.h"
+#include "MockIPerson.h"
 #include <gtest/gtest.h>
 using ::testing::Return;
 
@@ -9,7 +9,7 @@ TEST(GreeterTests, GreetTest) {
 }
 
 TEST(GreeterTests, GreetToTest) {
-  MockPerson mockPerson;
+  MockIPerson mockPerson;
   EXPECT_CALL(mockPerson, getName()).WillOnce(Return("Greg"));
   Greeter g;
   ASSERT_STREQ(g.greetTo(mockPerson).c_str(), "Hi Greg!");

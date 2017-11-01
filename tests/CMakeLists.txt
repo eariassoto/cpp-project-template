@@ -27,6 +27,7 @@ set (SRC_DIR src)
 set(PROY_UT_SRC
     ${SRC_DIR}/main.cpp
     ${SRC_DIR}/greeterTests.cpp
+    ${SRC_DIR}/personTests.cpp
 )
 
 set (MAIN_SRC_DIR ../src)
