@@ -4,7 +4,7 @@
 
 class Person : public IPerson {
 public:
-  Person(std::string name) : name(name){};
+  Person(std::string name);
   ~Person(){};
 
   std::string getName() const { return name; };

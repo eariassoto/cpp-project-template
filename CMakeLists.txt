@@ -24,6 +24,7 @@ include_directories (${PROJECT_SOURCE_DIR}/${INCL_DIR})
 set (SOURCE
     ${SRC_DIR}/main.cpp
     ${SRC_DIR}/greeter.cpp
+    ${SRC_DIR}/person.cpp
 )
 
 # Output folder
@@ -43,6 +44,8 @@ if (CMAKE_BUILD_TYPE STREQUAL "Coverage")
 		'${PROJECT_SOURCE_DIR}/tests/*'
 		'${CMAKE_BINARY_DIR}/googletest-src/googletest/include/gtest/*'
 		'${CMAKE_BINARY_DIR}/googletest-src/googletest/src/*'
+		'${CMAKE_BINARY_DIR}/googletest-src/googlemock/include/gmock/*'
+		'${CMAKE_BINARY_DIR}/googletest-src/googlemock/src/*'
     )
     SETUP_TARGET_FOR_COVERAGE(
 		NAME coverage
